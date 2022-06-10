@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML Model</title>
+</head>
+<body>
+<h1>
+    Placement Prediction
+</h1>
+<form action="http://127.0.0.1:5000/predict" method="post">
+    {% if result %}
+    <p>{{ result }}</p>
+    {% endif %}
+
+    <label>CGPA</label><br>
+    <input type="number" name="CGPA" placeholder="Enter CGPA"><br><br>
+
+    <label>IQ</label><br>
+    <input type="number" name="IQ" placeholder="Enter IQ"><br><br>
+
+    <label>Profile Score</label><br>
+    <input type="number" name="profile_score" placeholder="Enter Profile Score"><br><br>
+
+    <input type="submit"name="predict"><br><br>
+
+</form>
+
+</body>
+</html>
